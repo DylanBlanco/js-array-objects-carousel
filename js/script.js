@@ -1,51 +1,38 @@
-const imagesContainer = document.querySelector(".images-container");
-console.log(`imagesContainer`, imagesContainer, typeof imagesContainer);
-
-const images = [`img/01.webpp`, `img/02.webpp`, `img/03.webpp`, `img/04.webpp`, `img/05.webpp`];
-
-for (let i = 0; 1 < images.length; i++) {
-    console.log(images[i]);
-    if (i==0) {
-        imagesContainer.innerHTML += `<img src="${images[i]}" class="active">`;
+const images = [
+    {
+        image: 'img/01.webp',
+        title: 'Marvel\'s Spiderman Miles Morale',
+        text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
+    }, {
+        image: 'img/02.webp',
+        title: 'Ratchet & Clank: Rift Apart',
+        text: 'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
+    }, {
+        image: 'img/03.webp',
+        title: 'Fortnite',
+        text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
+    }, {
+        image: 'img/04.webp',
+        title: 'Stray',
+        text: 'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
+    }, {
+        image: 'img/05.webp',
+        title: "Marvel's Avengers",
+        text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
-    else {
-        imagesContainer.innerHTML += `<img src="${images[i]}">`;
+];
 
-    }
-}
+const active = document.getElementById(`active`);
+for (let i = 0; i < images.length; i++) {
+    //console.log(`Name`, images[i]);
 
-const allimgs = document.querySelectorAll(`.images.container > img`);
-console.log(`allImg`, allimgs, typeof allimgs)
-
-let currentlyActiveImg = 0;
-
-const nextButton = document.getElementById(`next-button`);
-nextButton.addEventListener(`click`, function () {
-    if (currentlyActiveImg < images.length - 1) {
-        //console.log(`click next`);
-        //document.querySelector(`.images-container > img:nth-child(`+ currentlyActiveImg +`)`).classList.remove(`active`);
-        
-        currentlyActiveImg++;
-    
-        //document.querySelector(`.images-container > img:nth-child(`+ currentlyActiveImg +`)`).classList.add(`active`);
-    }
-    else {
-        currentlyActiveImg = 0
-    }
-    allimgs[currentlyActiveImg].classList.add(`active`)
-})
-
-const prevButton = document.getElementById(`prev-button`);
-prevButton.addEventListener(`click`, function () {
-    allimgs[currentlyActiveImg].classList.remove(`active`);
-
-    if (currentlyActiveImg > 0) {
-        //console.log(`click prev`);
-        //document.querySelector(`.images-container > img:nth-child(`- currentlyActiveImg -`)`).classList.remove(`active`);
-        
-        currentlyActiveImg = 0;
-    
-        //document.querySelector(`.images-container > img:nth-child(`- currentlyActiveImg -`)`).classList.add(`active`);
-        allimgs[currentlyActiveImg].classList.add(`active`);
-    }
-})
+    console.log(`
+        Image
+        `, images[i].image);
+    console.log(`
+        Title
+        `, images[i].title);
+    console.log(`
+        Text
+        `, images[i].text);
+};
