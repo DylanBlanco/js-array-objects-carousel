@@ -6,11 +6,45 @@
 
     <!--link css-->
     <link rel="stylesheet" href="css/style.css">
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <title>Document</title>
+    <title>Carosello Array di Oggetti</title>
 </head>
 <body>
-    
+    <!--TITOLO-->
+    <header>
+        <div class="container">
+            <h1>Carosello Array di Oggetti</h1>
+        </div>
+    </header>
+
+    <!--carosello-->
+    <main>
+        <div class="container">
+            <!-- <div class="img-container">
+                <img src="img/01.webp" alt="spider-man">
+                <img src="img/02.webp" alt="Ratchet">
+                <img src="img/03.webp" alt="Fortnite">
+                <img src="img/04.webp" alt="Stray">
+                <img src="img/05.webp" alt="Avengers">
+            </div> -->
+            <div class="img-container">
+                <div class="box-img">
+                    <img src="img/01.webp" alt="spider-man">
+                    <div id="active"></div>
+                </div>
+                <div class="button-right">
+                    <button><i class="fa-solid fa-circle-chevron-right"></i></button>
+                </div>
+                <div class="button-left">
+                    <button><i class="fa-solid fa-circle-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+        
     <!--link js-->
     <script type="text/javascript" src="js/script.js"></script>
 </body>

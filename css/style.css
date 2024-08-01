@@ -6,3 +6,61 @@ RESET
     padding: 0;
     box-sizing: border-box;
 }
+
+/***************
+COLOR
+***************/
+main {
+    background-color: beige;
+}
+.img-container {
+    background-color: brown;
+}
+/***************
+GENERAL
+***************/
+header {
+    height: 50px;
+}
+main .container {
+    width: 80%;
+    height: calc(100vh - 50px);
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.box-img {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+img {
+    object-fit: cover;
+}
+
+.button-right {    
+    position: absolute;
+    right: 3%;
+    top: calc(50% - (25px / 2));
+}
+.button-left {    
+    position: absolute;
+    left: 3%;
+    top: calc(50% - (25px / 2));
+}
+.fa-solid {
+    font-size: 1.5rem;
+    background-color: grey;
+    color: white;
+}
